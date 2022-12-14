@@ -1,0 +1,295 @@
+*{ /*Estilos generales que se le asignaron a la página general*/
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Calculando el ancho total de los lados de la caja, es decir, su tamaño. Utilizando la propiedad border box para que mantenga su tamaño y para que 
+    el box model no se rompa.*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /*Estableciendo tipografía general utilizada en la página*/
+}
+
+a{
+    text-decoration: none; /*Evitar la decoración por defecto de los textos de manera general*/
+}
+
+.padre{
+    display: flex; /*Disposición de flexbox en general, la cual no será utilizada*/
+    flex-flow: column nowrap; /*Para que todo se adapte según el espacio establecido*/
+}
+
+.margen-interno{
+    padding: 0 10px; /*Espacio que se mostrará a los costados de los arituclos y aside, es decir entre ellos y la página en general*/
+}
+
+
+        /*
+
+        =============
+           HEADER
+        =============
+
+        */
+
+
+    .header{ /*Colocando un fondo previo, el cual estará*/
+        background: url(../imagenes/fondoo.jpg);
+        background-position: center; /*Definiendo la posición inicial de la imagen de fondo especificada centralmente.*/
+        background-attachment: contain; /*Para dejar fija la imagen principal del header*/
+        background-size: cover; /*Utilicé esta propiedad para que la escala de la imagen tengo el mayor tamaño posible sin estirarla para una mejor experiencia*/
+        display: flex;
+        flex-flow: column nowrap; /*Alineando los elementos en forma de columna pero se adapta al espacio establecido*/
+    }
+
+    .menu{ /*Le daremos una transparencia del 3, dándole un ancho de 60px al cuadro, con una linea blanca que aparecerá por debajo del mismo cuadro (la cual será el borde)
+           alineando los textos centralmente*/
+        background: rgba(0,0,0,.3);
+        display: flex;
+        flex-flow: row nowrap; /*Ordenando los elementos de izquiera a derecha horizontalmente (row) y nowrap para estar obligados a estar en una sola linea horizontal*/
+        height: 60px;
+        align-items: center; /*Centramos los elementos hijos*/
+        border-bottom: 2px solid rgba(255, 255, 255, .5);
+        text-align: center;
+    }
+    
+    .logo{
+        flex: 1 1 auto; /*La primera (grow) es la propiedad de crecimiento y luego la segunda (shrink) para que pueda hacerme más pequeño
+        y luego dándole un tamaño automático*/
+    }
+
+    .logo img{ /*Lo que hice acá fue agrandar y  alinear de ambos lados mi logo.png*/
+        width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 70px;
+    }
+
+    .nav{
+        flex: 5 1 auto;
+    }
+
+    .nav a{
+        color: #fff;
+        font-size: 11px;
+        text-transform: uppercase;
+        padding: 0 10px;
+        letter-spacing: 2px;
+    }
+
+    .nav a:hover{
+        color: #B5B2B2;
+    }
+
+    .social{
+        flex: 1 1 auto;
+        display: flex;
+    }
+
+    .social a{
+        font-size: 15px;
+        color: #fff;
+        padding: 0 20px;
+    }
+
+    .social a:hover{
+        color: #B5B2B2;
+    }
+
+    .texto-principal{
+        height: 580px;
+        display: flex;
+        align-items: center;
+    }
+
+    h1{ /*Esto es el texto principal que se muestra en la página, agregando un background transparente con poca densidad, color de tipografía y la familia de la misma,
+        alineando el texto centralmente, junto con el peso de la misma (font-weight) incluido la distancia de cada línea entre oraciones*/
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        color: #fff;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.5;
+        background: rgba(0,0,0,.2);
+    }
+
+
+        /*
+
+        =============
+           SECTION
+        =============
+
+        */
+
+
+    .section{
+        background: #F7F7F7;
+        display: flex;
+    }
+
+    .articulos{
+        background: #f7f7f7;
+        flex: 2 1 auto;
+        display: flex;
+        flex-flow: row wrap; /*Utilicé esta propiedad ya que con row los elementos como comenté anteriormente estarán de izquierda a derecha pero a diferencia con nowrap
+        los mismos no están obligados a estar en una misma linea si el ancho que disponene es limitado, por lo tanto se irán por debajo aprovechando el espacio restante infeior*/
+    }
+
+    .article{
+        flex: 1 1 40%;
+        color: #444;
+        font-size: 13px;
+        letter-spacing: 1px;
+        margin: 10px 10px 0 10px; /*Cambia el espacio que hay entre los elementos luego del borde, es decir, a diferencia del padding que es el espacio interno. 
+        Este fue utilizado para separar los articulos*/
+        flex: 1 1 45%;
+        background: #ececec;
+    }
+
+    .article img{
+        width: 100%; /*Utilizado para que un elemento adopte todo el ancho del elemento contenedor que lo contiene*/
+    }
+
+    h3{
+        color: #fff;
+        font-size: 13px;
+        padding: 8px 0 0 6px;
+        margin-top: -80px;
+    }
+
+    h2{ /*Modificando el tamaño de la letra junto con la propiedad transform uppercase la cual modificará el texto a mayúsculas con un padding arriba derecha abajo y a la izquierda*/
+        font-size: 25px;
+        text-transform: uppercase;
+        padding: 10px 0 20px 6px;
+        color: #fff;
+    }
+
+
+        /*
+
+        =============
+            ASIDE
+        =============
+
+        */
+
+
+    .aside {
+        flex: 1 1 auto;
+        margin: 10px 5px 10px 0;
+    }
+
+    .aside img{ /*Cambiando la resolución de la imagen del aside con un margin respectivo solo abajo*/
+        width: 300px;
+        height: 300px;
+        margin: 0 0 25px 0;
+    }
+
+    h4{
+        background: #000;
+        color: #fff;
+        font-size: 12px;
+        padding: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+
+        /*
+
+        ============
+           FOOTER
+        ============
+
+        */
+
+
+    .footer{ /*Centrando los elementos en ambos lados, con un ancho del background en específico*/
+        background: #080808;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        height: 50px;
+        align-items: center;
+    }
+
+    .pie { /*Centrando el texto verticalmente*/
+        text-align: center;
+    }
+
+    .pie a{ /*Todo en mayúscula, con un padding al ser 2 valores 0 para arriba 10px para abajo y con un espacio entre letras de 2px*/
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 0 10px;
+        letter-spacing: 2px;
+    }
+
+    .pie a:hover { /*Propiedad utilizada para cuando pase el cursor sobre el texto del footer su color sea de otro color*/
+        color: #ACABAB;
+    }
+
+    button{ /*Modificación necesaria para que el botom de alerta esté mejor, quitando el border, agrandando la tipografía, cambiando el cursos a la mano y con el mismo background que el del footer*/
+        background: #080808;
+        color: #fff;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    button:hover { /*Misma aplicación para cambiar el color cuando se pasa el cursor sobre el texto*/
+        color: #ACABAB;
+    }
+
+@media all and (max-width: 1120px) {/*Cuando llegue a esa resolución los elementos de la section se pondrán en columnas, el texto principal va a disminuir su tamaño*/
+    .section {
+        flex-direction: column;
+    }
+    .menu {
+        flex-direction: column;
+        height: auto; /*Valor por defecto que asigne el navegador*/
+    }
+    .aside {
+        display: flex;
+        justify-content: center;/*alineo los elementos del aside horizontalmente en el centro*/
+    }
+    h1{
+        font-size: 15px;
+    }
+    .texto-principal{ /*Caja de color la cual se adapta al texto, en este caso es de 450px*/
+        height: 450px;
+    }
+}
+
+@media all and (max-width: 910px) { /*Cuando llegue a esta resolución la altura y anchura de la imagen van a disminuir y se acomodaran verticulamente de izquierda a derecha */
+    .aside img{
+        width: 200px;
+        height: 200px;
+        flex-direction: row;
+    }
+}
+
+@media all and (max-width: 762px) { /* Cuando llegue a esta altura los articulos en este caso las imagenes con sus textos se pondrán en columnas de uno*/
+    .articulos {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 650px) { /*A esta resolución los nombres de las categorías no estarán, en su lugar van a estar los ínoconos para ahorrar espacio y también se cambiará su tamaño*/
+    .off {display: none;
+    }
+    .nav a{
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 440px) { /*El aside con sus publicidades se pondrán en columnas, reduciendo su tamaño en las imagenes*/
+    .aside {
+        flex-direction: column;
+    }
+    .aside img{
+        width: 100px;
+        height: 100px;
+    }
+}

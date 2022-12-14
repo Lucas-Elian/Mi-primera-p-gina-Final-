@@ -1,0 +1,2 @@
+alert ("AVISO!!! ESTA PÁGINA ESTÁ EN SU VERSIÓN BETA.");
+

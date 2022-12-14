@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Página web</title> 
+    <meta charset="UTF-8">
+    <meta name="keywords" content="diseño web, programacion, css, html, javascript"> <!--Palabras claves inspiradas en mi página-->
+    <meta name="description" content="Este es un sitio web donde tendrás a tu alcance información sobre la programación y diseño web, noticias y articulos los cuales serán útiles para que estés informado">
+    <!--Descripción de mi página web-->
+    <meta name="author" content="Lucas Elian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet"> <!--Agregamos fuentes personalizadas en este caso "Open Sans"-->
+    <link rel="stylesheet" href="normalize.css"> <!--Armoniza la visualización inicial de los navegadores y que corrige algunos errores.-->
+    <link rel="stylesheet" href="estilos.css"> 
+    <script src="https://kit.fontawesome.com/23f4407575.js" crossorigin="anonymous"></script> <!--Mediante el scrip de java agregamos el poder colocar iconos en nuestra página web-->
+    <script src="ediciones.js"></script>
+  </head>
+  <body>
+    <div class="padre">
+        <!--Header compuesto por un div general el cual abarcará nuestro logo corporativo, las categorías mendiante nav, junto con span con la clase off
+        también incluí la clase social para colocar mis redes sociales-->
+        <header class="header"> 
+            <div class="menu margen-interno">
+                <div class="logo">
+                    <a href="index.html"><img src="../Imagenes/Logo.png" alt=""></a> <!--El logo nos llevará a nuestro archivo index-->
+                </div>
+                <nav class="nav"> <!--En esta parte se colocaron iconos de font awesome con sus respectivos nombres-->
+                    <a href="#"><i class="fa-solid fa-house"></i><span class="off"> Menú</span></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i><span class="off"> Acerca de</span></a>
+                    <a href="#"><i class="fa-regular fa-folder-open"></i><span class="off"> Información</span></a>
+                    <a href="#"><i class="fa-solid fa-file-lines"></i><span class="off"> Artículos</span></a>
+                    <a href="#"><i class="fa-solid fa-user"></i><span class="off"> Contacto</span></a>
+                </nav> <!--Es la navegación-->
+                <div class="social"> <!--Iconos de font awesome con sus respectivos nombres de redes sociales -->
+                    <div><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i> Facebook</a></div>
+                    <div><a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i> Twitter</a></div>
+                    <div><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i> Instagram</a></div>
+                </div>
+            </div><!--Esto será el texto principal de la página, el cual fue empleado para dar una presentación del tema general que tendrá la página en sí-->
+            <div class="texto-principal margen-interno">
+                <h1>¿Qué es la programación y para qué nos sirve? La programación es la actividad que se enfoca en organizar un conjunto de datos ordenados a seguir para ser ciertas cosas, 
+                    esta definición puede utilizarse en muchos contextos. Pero en el área de informática la programación es fundamental para la relación entre ordenadores y los usuarios.
+                    La misma nos sirve para prácticamente te sirve para todo. Es una respuesta tan ambigua como compleja. Programar te sirve para comunicarte con cualquier computadora, 
+                    smartphone, tablet y dado que nos encontramos en un escenario en donde prácticamente estamos rodeados de ellos 24/7, programar se vuelve indispensable si te quieres 
+                    dedicar a la tecnología, a la innovación o incluso a trabajar en cualquiera de las ramas a las que te dediques y desees construir tu propio sitio web.</h1>
+            </div>
+        </header>
+
+        <!--Section el cual incluye en el mismo el aside, la cual está dividida en los artículos, el aside (publicidad)-->
+        <!--Colocamos 4 imágenes con títulos y demás junto con su párrafo explicativo-->
+        <section class="section margen-interno">
+            <div class="articulos">
+                <article class="article">
+                    <img src="../Imagenes/Imagen1.jpg" alt="">
+                    <h3>Diseñando páginas con html</h3>
+                    <h2>¿Qué es Html?</h2>
+                    <p>HTML(Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. 
+                       Define el significado y la estructura del contenido web. Generalmente se utilizan otras tecnologías para describir la 
+                       apariencia/presentación de una página web o la funcionalidad/comportamiento. 
+                     </p>
+                </article>
+                <article class="article">
+                    <img src="../Imagenes/Imagen2.jpg" alt="">
+                    <h3>Realizando estilos con CSS</h3>
+                    <h2>¿Qué es CSS?</h2>
+                    <p>CSS son las siglas en inglés para "hojas de estilo en cascada" (Cascading Style Sheets). Básicamente, es un lenguaje 
+                        que maneja el diseño y presentación de las páginas web, es decir, cómo lucen cuando un usuario las visita. Funciona 
+                        junto con el lenguaje HTML.
+                     </p>
+                </article>
+                <article class="article">
+                    <img src="../Imagenes/Imagen3.jpg" alt="">
+                    <h3>Distribución del espacio con Flexbox</h3>
+                    <h2>¿Qué es Flexbox?</h2>
+                    <p>El Módulo de Caja Flexible, comúnmente llamado flexbox, fue diseñado como un modelo unidimensional de layout, 
+                        y como un método que pueda ayudar a distribuir el espacio entre los ítems de una interfaz y mejorar las 
+                        capacidades de alineación entre los diferentes objetos.
+                     </p>
+                </article>
+                <article class="article">
+                    <img src="../Imagenes/Imagen4.jpg" alt="">
+                    <h3>Programando con Javascript</h3>
+                    <h2>¿Qué es Javascript?</h2>
+                    <p>JavaScript es un lenguaje de programación que los desarrolladores utilizan para hacer páginas web interactivas. 
+                        Desde actualizar fuentes de redes sociales a mostrar animaciones y mapas interactivos, las funciones de JavaScript 
+                        pueden mejorar la experiencia del usuario de un sitio web.
+                    </p>
+                </article>
+            </div>
+            <!--Publidad y/o contenido ajeno a la página-->
+            <aside class="aside">
+                <div class="publicidad">
+                    <h4>Curso Pythom</h4>
+                    <img src="../Imagenes/Publicidad1.jpg" alt="">
+                </div>
+                <div class="publicidad">
+                    <h4>Curso programación</h4>
+                    <img src="../Imagenes/Publicidad2.jpg" alt="">
+                </div>
+                <div class="publicidad">
+                    <h4>Programación para niños</h4>
+                    <img src="../Imagenes/Publicidad3.jpg" alt="">
+                </div>
+            </aside>
+            
+        </section>
+
+        <!--El pie de página el cual tendrá un href que no nos lleva a ningún lado junto con su texto final para luego emplear estilos correspondientes con css-->
+        <footer class="footer margen-interno">
+            <nav class="pie">
+                <a href="#">Desarrollado por Lucas Elian</a>
+            </nav>
+        </footer>
+        <!--Empleando javascrip con un boton de alerta-->
+        <button onclick="alert('Si te gusta la página podes seguirme en mis redes sociales')">CLICK ME!!!</button>
+        
+    </div>
+  </body>
+</html>
